@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>JS Cookie</title>
+        <script  language="javascript" type="text/javascript">
+            function WriteCookie(){
+                if(document.myform.customer.value == ""){ // checks the value is empty
+                    alert("Enter some value");              // if empty pop-up like "Enter Some value"
+                    return;                                 // and break the execution. i.e following operation will not be executed.
+                }
+                var cookievalue = escape(document.myform.customer.value)+";"; // entered text is stored in the cookievalue variable followed by ;(semicolon).  
+                // the above text came through  document -> myform -> customer
+                document.cookie = "name = " + cookievalue;
+                document.write("setting cookies : "+"name = "+cookievalue);
+            }
+        </script>
+    </head>
+    <body>
+        <form name = "myform" action="">
+            Enter name:<input type="text" name="customer">
+            <input type="button" value="set cookie" onclick="WriteCookie();" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        JavaScript Animations
+    </title>
+
+    <script>
+        var arr = new Array("Img-1.jpeg","Img-2.jpg","Img-3.jpg","Img-4.jpg");
+        var i=1;
+        var ref;
+
+        function picLibrary(){
+            document.images[0].src=arr[i];
+            document.images.length("1280x920");
+            i++;
+            if(i<3)
+                i=0;
+        }
+
+        function start(){
+            ref = setInterval("picLibrary()",1000);
+        }
+        function stop(){
+            clearInterval(ref);
+        }
+    </script>
+</head>
+<body>
+    <img src="Img-1.jpeg"  name="img1" onmouseover="stop()" onmouseout="start()" />
+</body>
+</html>

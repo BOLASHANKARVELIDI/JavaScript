@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            JavaScript Exceptions
+        </title>
+        <script language="javascript" type="text/javascript">
+            function myFunc(){
+                var a=100
+                try{
+                    alert("Value od variable is : "+a);
+                }
+                catch(e){
+                    alert("Error");
+                }
+                finally{
+                    alert("Finally block will always execute!");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>Click the following to see the reult :</p>
+        <form>
+            <input type="button" onclick="myFunc()" value="Enter">
+        </form>
+    </body>
+</html>
